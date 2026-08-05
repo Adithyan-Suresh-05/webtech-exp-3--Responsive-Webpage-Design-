@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karunya Architectural Firm</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            color: #120000ee;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #1f3c88;
+            color: #fff;
+            text-align: center;
+            padding: 28px 20px;
+            border-radius: 12px;
+        }
+
+        header h1,
+        h2,
+        h3 {
+            margin-top: 0;
+        }
+
+        header p {
+            margin-bottom: 0;
+            font-size: 1.05rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 18px 0;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #1f3c88;
+            background: #e9eef9;
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+
+        .nav a:hover {
+            background: #1f3c88;
+            color: #fff;
+        }
+
+        section,
+        .card,
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            margin-bottom: 22px;
+        }
+
+        h2 {
+            color: #8b0000;
+            margin-bottom: 12px;
+        }
+
+        p,
+        li,
+        dd {
+            color: #444;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .hero {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-copy,
+        .hero-image {
+            flex: 1 1 320px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border: 2px solid #1f3c88;
+        }
+
+        .columns {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .columns > section {
+            flex: 1 1 320px;
+            margin-bottom: 0;
+        }
+
+        .service-cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            flex: 1 1 220px;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            color: #1f3c88;
+        }
+
+        .card button,
+        input[type="submit"],
+        input[type="reset"] {
+            border: 0;
+            border-radius: 8px;
+            padding: 10px 16px;
+            background: #1f3c88;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .card button:hover,
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background: #0f234f;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #333;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #1f3c88;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f7f7;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        .inline-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .inline-options label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .faq-item {
+            transition: 0.25s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 16px 0 0;
+            color: #555;
+        }
+
+        @media screen and (max-width: 992px) {
+            .container {
+                width: 92%;
+            }
+
+            .columns > section,
+            .card {
+                flex-basis: calc(50% - 10px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .hero,
+            .columns,
+            .service-cards {
+                flex-direction: column;
+            }
+
+            .columns > section,
+            .card {
+                flex-basis: 100%;
+            }
+
+            .card button,
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                width: 100%;
+                padding: 12px;
+            }
+
+            header {
+                padding: 22px 16px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="top">
+        <header>
+            <h1>Karunya Architectural Firm</h1>
+            <p>Designing Modern Homes, Offices and Commercial Buildings</p>
+        </header>
+
+        <nav class="nav" aria-label="Primary navigation">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#consultation">Consultation</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="hero">
+                <div class="hero-copy">
+                    <p>
+                        Karunya Architectural Firm provides innovative architectural designs for residential,
+                        commercial and industrial buildings. Our goal is to create beautiful, modern and sustainable
+                        spaces for our clients.
+                    </p>
+                    <p>
+                        This experiment demonstrates HTML5 semantics, internal CSS, responsive images, flexbox layout,
+                        and media queries for desktop, tablet and mobile screens.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/building.jpg" alt="Building">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Useful Links</h2>
+            <p><a href="https://www.archdaily.com" target="_blank" rel="noreferrer">Visit ArchDaily</a></p>
+            <p><a href="#services">Go to Services</a></p>
+            <p><a href="#top">Back to Top</a></p>
+            <p><a href="mailto:info@karunya.com">Email Us</a></p>
+            <p><a href="tel:+919876543210">Call Us</a></p>
+            <p>Click the image below to visit ArchDaily.</p>
+            <a href="https://www.archdaily.com" target="_blank" rel="noreferrer">
+                <img src="images/architect.jpg" alt="Architect" style="max-width:220px;">
+            </a>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>House Design</td>
+                    <td>₹50,000</td>
+                </tr>
+                <tr>
+                    <td>Office Design</td>
+                    <td>₹80,000</td>
+                </tr>
+                <tr>
+                    <td>Interior Design</td>
+                    <td>₹30,000</td>
+                </tr>
+                <tr>
+                    <td>Landscape Design</td>
+                    <td>₹20,000</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2 style="text-align:center;">Featured Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <img src="images/house.jpg" alt="House">
+                    <h3>House Design</h3>
+                    <p>Modern residential planning with elegant architecture.</p>
+                    <button type="button">Read More</button>
+                </div>
+                <div class="card">
+                    <img src="images/office.jpg" alt="Office">
+                    <h3>Office Design</h3>
+                    <p>Professional office spaces for businesses.</p>
+                    <button type="button">Read More</button>
+                </div>
+                <div class="card">
+                    <img src="images/interior.jpg" alt="Interior">
+                    <h3>Interior Design</h3>
+                    <p>Creative interior solutions for every lifestyle.</p>
+                    <button type="button">Read More</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Architectural Terms</h2>
+            <dl>
+                <dt><b>Blueprint</b></dt>
+                <dd>A technical drawing used for building construction.</dd>
+                <dt><b>Elevation</b></dt>
+                <dd>The front or side view of a building.</dd>
+                <dt><b>Floor Plan</b></dt>
+                <dd>A drawing showing the arrangement of rooms.</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Project Process</h2>
+            <ol>
+                <li>Meet Client</li>
+                <li>Create Design
+                    <ol>
+                        <li>Prepare Floor Plan</li>
+                        <li>Create 3D Model</li>
+                    </ol>
+                </li>
+                <li>Construction</li>
+                <li>Final Handover</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Facilities</h2>
+            <ul>
+                <li>Design Services
+                    <ul>
+                        <li>Residential Design</li>
+                        <li>Commercial Design</li>
+                        <li>Industrial Design</li>
+                    </ul>
+                </li>
+                <li>Interior Design</li>
+                <li>Landscape Design</li>
+                <li>Project Consultation</li>
+            </ul>
+        </section>
+
+        <section id="consultation">
+            <h2 style="text-align:center;">Book a Free Consultation</h2>
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="name">Client Name</label></td>
+                        <td><input type="text" id="name" placeholder="Enter your full name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" id="email" placeholder="example@gmail.com" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Mobile Number</label></td>
+                        <td><input type="tel" id="phone" pattern="[0-9]{10}" placeholder="10-digit mobile number" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="budget">Project Budget (₹)</label></td>
+                        <td><input type="number" id="budget" min="100000" max="100000000"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Expected Start Date</label></td>
+                        <td><input type="date" id="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Project Type</td>
+                        <td class="inline-options">
+                            <label><input type="radio" name="project" value="Residential"> Residential</label>
+                            <label><input type="radio" name="project" value="Commercial"> Commercial</label>
+                            <label><input type="radio" name="project" value="Interior"> Interior</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Required Services</td>
+                        <td class="inline-options">
+                            <label><input type="checkbox" value="House Design"> House Design</label>
+                            <label><input type="checkbox" value="Interior Design"> Interior Design</label>
+                            <label><input type="checkbox" value="Landscape"> Landscape</label>
+                            <label><input type="checkbox" value="Renovation"> Renovation</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="architect">Select Architect</label></td>
+                        <td>
+                            <select id="architect" required>
+                                <option value="">--Choose Architect--</option>
+                                <option>Mr. Adithyan</option>
+                                <option>Mr. Rohith</option>
+                                <option>Mr. Lukson Akhi</option>
+                                <option>Ms. Meera</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Project Address</label></td>
+                        <td><textarea id="address" rows="4" placeholder="Enter project location"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="color">Preferred Exterior Color</label></td>
+                        <td><input type="color" id="color"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="plan">Upload Building Plan</label></td>
+                        <td><input type="file" id="plan"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="priority">Project Priority</label></td>
+                        <td>
+                            Low
+                            <input type="range" id="priority" min="1" max="10">
+                            High
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="form-actions">
+                                <input type="submit" value="Book Consultation">
+                                <input type="reset" value="Clear Form">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+
+        <section id="faq">
+            <h2 style="text-align:center;">Client Support Center</h2>
+            <div class="faq-item">
+                <h3>How long does a project take?</h3>
+                <p>Most residential projects take 2 to 4 weeks for planning and design.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I customize my design?</h3>
+                <p>Yes. Every project is designed according to your requirements.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is consultation free?</h3>
+                <p>Yes, the first consultation is completely free.</p>
+            </div>
+        </section>
+
+        <section id="feedback">
+            <h2 style="text-align:center;">Client Feedback</h2>
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="feedback-name">Name</label></td>
+                        <td><input type="text" id="feedback-name" placeholder="Enter your name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="feedback-email">Email</label></td>
+                        <td><input type="email" id="feedback-email" placeholder="Enter your email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="rating">Rating</label></td>
+                        <td>
+                            <select id="rating" required>
+                                <option>Excellent</option>
+                                <option>Very Good</option>
+                                <option>Good</option>
+                                <option>Average</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="comments">Comments</label></td>
+                        <td><textarea id="comments" rows="4" placeholder="Share your feedback"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="form-actions">
+                                <input type="submit" value="Submit Feedback">
+                                <input type="reset" value="Clear">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>
+                Karunya Architectural Firm<br>
+                Coimbatore, Tamil Nadu<br>
+                Phone: +91 9876543210<br>
+                Email: info@karunya.com
+            </p>
+        </section>
+
+        <div class="footer">
+            <p>© 2025 Karunya Architectural Firm</p>
+        </div>
+    </div>
+</body>
+
+</html>
